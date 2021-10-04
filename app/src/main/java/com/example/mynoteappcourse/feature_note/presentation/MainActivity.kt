@@ -1,4 +1,4 @@
-package com.example.mynoteappcourse
+package com.example.mynoteappcourse.feature_note.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
