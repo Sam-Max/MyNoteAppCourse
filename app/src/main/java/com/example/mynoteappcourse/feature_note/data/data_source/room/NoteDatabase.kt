@@ -1,4 +1,4 @@
-package com.example.mynoteappcourse.feature_note.domain.data_source.room
+package com.example.mynoteappcourse.feature_note.data.data_source.room
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
