@@ -1,13 +1,10 @@
-package com.example.mynoteappcourse.feature_note.presentation
+package com.example.mynoteappcourse.feature_note.presentation.notes
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mynoteappcourse.feature_note.domain.model.Note
-import com.example.mynoteappcourse.feature_note.domain.use_cases.DeleteNoteUseCase
-import com.example.mynoteappcourse.feature_note.domain.use_cases.GetNotesUseCase
-import com.example.mynoteappcourse.feature_note.domain.use_cases.InsertNoteUseCase
 import com.example.mynoteappcourse.feature_note.domain.use_cases.NoteUseCases
 import com.example.mynoteappcourse.feature_note.domain.util.NoteOrder
 import dagger.hilt.android.lifecycle.HiltViewModel

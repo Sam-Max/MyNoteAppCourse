@@ -1,4 +1,4 @@
-package com.example.mynoteappcourse.feature_note.presentation
+package com.example.mynoteappcourse.feature_note.presentation.notes
 
 import com.example.mynoteappcourse.feature_note.domain.model.Note
 import com.example.mynoteappcourse.feature_note.domain.util.NoteOrder
