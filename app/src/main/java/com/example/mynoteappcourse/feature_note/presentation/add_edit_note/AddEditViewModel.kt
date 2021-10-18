@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.mynoteappcourse.feature_note.domain.model.Note
 import com.example.mynoteappcourse.feature_note.domain.use_cases.GetNoteUseCase
 import com.example.mynoteappcourse.feature_note.domain.use_cases.InsertNoteUseCase
+import com.example.mynoteappcourse.feature_note.domain.use_cases.NoteUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.broadcast
@@ -16,7 +17,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AddEditViewModel @Inject constructor(
-    private val insertNote: InsertNoteUseCase
+    private val noteUseCases: NoteUseCases
 ): ViewModel()  {
 
     private val _noteTitle= mutableStateOf(NoteTextFieldState(
@@ -56,7 +57,7 @@ class AddEditViewModel @Inject constructor(
             is AddEditNoteEvents.SaveNote -> {
                 viewModelScope.launch {
                     try {
-                        insertNote(Note(
+                        noteUseCases.insertNoteUseCase(Note(
                             title = noteTitle.value.text,
                             content= noteBody.value.text,
                             color= noteColor.value.toString(),
