@@ -60,7 +60,7 @@ class AddEditViewModel @Inject constructor(
                         noteUseCases.insertNoteUseCase(Note(
                             title = noteTitle.value.text,
                             content= noteBody.value.text,
-                            color= noteColor.value.toString(),
+                            color= noteColor.value,
                             timeStamp = System.currentTimeMillis(),
                             id = currentNoteId
                         ))

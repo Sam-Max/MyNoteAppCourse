@@ -8,7 +8,7 @@ import com.example.mynoteappcourse.ui.theme.*
 data class Note (
     val title: String,
     val content: String,
-    val color: String,
+    val color: Int,
     val timeStamp: Long,
     @PrimaryKey val id: Int?= null
     )
