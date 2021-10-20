@@ -11,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.mynoteappcourse.feature_note.domain.model.Note
+import com.example.mynoteappcourse.feature_note.presentation.notes.NotesScreen
 import com.example.mynoteappcourse.feature_note.presentation.notes.components.NoteItem
 import com.example.mynoteappcourse.feature_note.presentation.notes.components.SelectionSection
 import com.example.mynoteappcourse.ui.theme.MyNoteAppCourseTheme
@@ -22,16 +23,7 @@ class MainActivity : ComponentActivity() {
             MyNoteAppCourseTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    NoteItem(
-                        note = Note(
-                            title = "WandaVision",
-                            content = "WandaVision it is a cool tv show form Marvel",
-                            timeStamp = SystemClock.currentThreadTimeMillis(),
-                            color = Color.BLUE
-                        )
-                    ) {
-
-                    }
+                    NotesScreen()
                 }
             }
         }
